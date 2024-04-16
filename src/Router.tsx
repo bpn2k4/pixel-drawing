@@ -1,10 +1,16 @@
 import { FC, ReactNode } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Draw from './pages/Draw'
 
 const routes = [
   {
     path: '/',
-    element: <h1>Test</h1>
+    element: <Home />
+  },
+  {
+    path: '/draw/:boardId',
+    element: <Draw />
   }
 ]
 

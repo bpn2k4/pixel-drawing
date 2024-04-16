@@ -32,7 +32,7 @@ const Canvas: FC<CanvasProps> = () => {
 
   useLayoutEffect(() => {
     ref.canvas = canvasRef.current
-    ref.context = canvasRef.current?.getContext ? ("2d")
+    ref.context = canvasRef.current?.getContext("2d")
   }, [])
 
   return (
@@ -51,7 +51,7 @@ type CanvasProps = {
 
 type StateRef = {
   canvas: HTMLCanvasElement | null,
-  context: CanvasRenderingContext2D | null
+  context: CanvasRenderingContext2D | null | undefined
   scale: number,
   isMoving: Boolean,
   translate: { x: number, y: number },
