@@ -4,6 +4,10 @@ services:
   pixel:
     image: bpn2k4/pixel:v1.0
     container_name: pixel
+    restart: always
+    environment:
+      - PORT=8080
+      - SQL_DATA_DIR=/tmp/database
     ports:
       - 8080:8080
     volumes:
