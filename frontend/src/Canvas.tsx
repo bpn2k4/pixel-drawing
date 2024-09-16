@@ -89,7 +89,7 @@ const CanvasReal = memo(() => {
 
     const color = Utils.Color.color
 
-    fetch('http://localhost:8080/api/points', {
+    fetch(`${API_URL}/api/points`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
