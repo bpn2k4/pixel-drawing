@@ -2,7 +2,9 @@ import { FC, useLayoutEffect, useRef, useState } from 'react'
 
 const WIDTH = 1920;
 const HEIGHT = 1080;
-const Canvas: FC<CanvasProps> = () => {
+const Canvas: React.FC<CanvasProps> = ({
+
+}) => {
 
   const [scale, setScale] = useState<number>(1)
   const [isMoving, setIsMoving] = useState(true)
