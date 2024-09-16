@@ -7,7 +7,7 @@ COPY ./frontend/package*.json ./
 RUN npm install
 
 COPY ./frontend/public ./frontend/index.html \
-  ./frontend/postcess.config.js ./frontend/tailwind.config.ts \
+  ./frontend/postcss.config.js ./frontend/tailwind.config.ts \
   ./frontend/tsconfig.app.json ./frontend/tsconfig.json \
   ./frontend/tsconfig.node.json ./frontend/vite.config.ts \
   /app/

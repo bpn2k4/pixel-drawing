@@ -1,15 +1,14 @@
+import fs from 'fs'
+import path from 'path'
 import sqlite3 from 'sqlite3'
-
-interface Row {
-  count: number;
-}
+import { SQL_DATA_DIR } from './config'
 
 class Sql {
 
   private db: sqlite3.Database
 
   constructor() {
-    this.db = new sqlite3.Database("database.sqlite")
+    this.db = new sqlite3.Database(path.join(SQL_DATA_DIR, 'database.sqlite'))
   }
 
   public getDb() {
