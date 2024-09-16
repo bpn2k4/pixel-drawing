@@ -1,0 +1,10 @@
+name: "pixel"
+
+services:
+  pixel:
+    image: bpn2k4/pixel:v1.0
+    container_name: pixel
+    ports:
+      - 8080:8080
+    volumes:
+      - ./data:/tmp/database
