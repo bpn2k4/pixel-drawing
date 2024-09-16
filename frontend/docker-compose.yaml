@@ -1,0 +1,15 @@
+name: "pixel"
+
+services:
+  pixel:
+    image: bpn2k4/pixel:v0.1
+    container_name: pixel
+    expose:
+      - 80
+    restart: always
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
